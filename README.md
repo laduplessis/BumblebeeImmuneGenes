@@ -36,47 +36,48 @@ Pre-processing, extracting the coding sequences and translations, setting up con
 - GetNewAlignments.py:
 	Produce alignments that can be used with PAML
 
-	    - Extract sequences for each group from the files created with ExtractDNA.py
-	    - Skip groups that have missing sequences for some species
-	    - Check translation again with OrthoDB alignments
-	    - If there is more than one sequence of a species:
+    - Extract sequences for each group from the files created with ExtractDNA.py
+    - Skip groups that have missing sequences for some species
+    - Check translation again with OrthoDB alignments
+    - If there is more than one sequence of a species:
 
-	            * Perform a new alignment on the translated sequences (AA) with the chosen MSA program for 
-	              every possible combination of sequences so that the MSA has only one sequence per species
-	            * Use Gblocks (with strict settings) to restrict the alignments to the best matching areas only
-	            * Select the alignment with the longest well-aligned parts (as determined by Gblocks)
-	            * If there are more alignments with disjoint sets of sequences select alignments by longest well aligned parts until 
-	              the maximum number is selected
-	              
-	        Else:
-	            * Perform a new alignment on the translated sequences with the chosen MSA program
-	    - Trim the alignment:
-	            * Using Gblocks
-	    - Skip groups where the trimmed alignment is shorter than the minimum length
-	    - Save trimmed cDNA alignments in Phylip format so it can be used with PAML
+        * Perform a new alignment on the translated sequences (AA) with the chosen MSA program for 
+          every possible combination of sequences so that the MSA has only one sequence per species
+        * Use Gblocks (with strict settings) to restrict the alignments to the best matching areas only
+        * Select the alignment with the longest well-aligned parts (as determined by Gblocks)
+        * If there are more alignments with disjoint sets of sequences select alignments by longest well aligned parts until 
+          the maximum number is selected
+
+        Else:
+            * Perform a new alignment on the translated sequences with the chosen MSA program
+    - Trim the alignment:
+            * Using Gblocks
+    - Skip groups where the trimmed alignment is shorter than the minimum length
+    - Save trimmed cDNA alignments in Phylip format so it can be used with PAML
 
 	Need to have MSA programs and Gblocks installled.  Check that programs are in your path.  
 	(For prographmsa the path is hardcoded for the moment)
 	(Some problems with Muscle and Prank)
 
 	Output:
-	    - Alignments.csv:  Exactly like Alignments.csv from ExtractDNA.py, but only for groups selected here
-	    - Skipped.csv:     Groups which have been skipped for whatever reason
-	    - Colsremoved.csv: List of columns removed from each of the alignments
+	
+    - Alignments.csv:  Exactly like Alignments.csv from ExtractDNA.py, but only for groups selected here
+    - Skipped.csv:     Groups which have been skipped for whatever reason
+    - Colsremoved.csv: List of columns removed from each of the alignments
 
-	    For each group that wasn't skipped:
+    For each group that wasn't skipped:
 
-	        - <group>.aa.fa:                          Protein sequences without gaps
-	        - <group>.dna.fa:                         Corresponding cDNA sequences
-	        - <group>.<msaprogram>.fas:               New alignment (AA, ids remapped)
-	        - <group>.<msaprogram>.dna.fas            New alignment (cDNA, ids remapped)
-	        - <group>.<msaprogram>.dna.fas-gb         Trimmed alignment from Gblocks
-	        - <group>.<msaprogram>.dna.fas-gb.txt     Gblocks statistics
-	        - <group>.<msaprogram>.dna.phylip         Trimmed cDNA alignment in Phylip, ready for Paml
-	        - <group>.<msaprogram>.phylip             Trimmed AA alignment in phylip
-	        - <group>.map                             Mapping of ids to the Phylip files
-	        - <group>.ids                             Identifiers of the original sequences used
-	        - <group>.combinations.tar                Temporary files from finding the best combination of sequences to use
+    - <group>.aa.fa:                          Protein sequences without gaps
+    - <group>.dna.fa:                         Corresponding cDNA sequences
+    - <group>.<msaprogram>.fas:               New alignment (AA, ids remapped)
+    - <group>.<msaprogram>.dna.fas            New alignment (cDNA, ids remapped)
+    - <group>.<msaprogram>.dna.fas-gb         Trimmed alignment from Gblocks
+    - <group>.<msaprogram>.dna.fas-gb.txt     Gblocks statistics
+    - <group>.<msaprogram>.dna.phylip         Trimmed cDNA alignment in Phylip, ready for Paml
+    - <group>.<msaprogram>.phylip             Trimmed AA alignment in phylip
+    - <group>.map                             Mapping of ids to the Phylip files
+    - <group>.ids                             Identifiers of the original sequences used
+    - <group>.combinations.tar                Temporary files from finding the best combination of sequences to use
 
 
 
