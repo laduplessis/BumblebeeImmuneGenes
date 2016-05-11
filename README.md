@@ -114,5 +114,14 @@ Pre-processing, extracting the coding sequences and translations, setting up con
 	Merge the output from the BEB and Interpro scan into one file that can be plotted to see where sites under selection fall within domains.
 
 
+
+## Data
+Files needed as input for some scripts
+
+- PAML templates
+- Files containing sets of taxa for various analyses 
+- Files containing topologies for various analyses  
+
 ## R scripts
 Likelihood-ratio tests, figures, tables, Venn diagrams etc.
+These need to be checked.
