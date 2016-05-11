@@ -60,14 +60,14 @@ Pre-processing, extracting the coding sequences and translations, setting up con
 	(Some problems with Muscle and Prank)
 
 	Output:
-	
+
     - Alignments.csv:  Exactly like Alignments.csv from ExtractDNA.py, but only for groups selected here
     - Skipped.csv:     Groups which have been skipped for whatever reason
     - Colsremoved.csv: List of columns removed from each of the alignments
 
     For each group that wasn't skipped:
 
-    - <group>.aa.fa:                          Protein sequences without gaps
+    - \<group\>.aa.fa:                          Protein sequences without gaps
     - <group>.dna.fa:                         Corresponding cDNA sequences
     - <group>.<msaprogram>.fas:               New alignment (AA, ids remapped)
     - <group>.<msaprogram>.dna.fas            New alignment (cDNA, ids remapped)
