@@ -15,18 +15,18 @@ Example workflows for the 4-taxa tree presented in the paper
 ## Python scripts
 Pre-processing, extracting the coding sequences and translations, setting up control files, post-processing and extracting useful information from output files.
 
-	- RestrictAlignments.py
-	- ExtractDNA.py
-	- GetNewAlignments.py
-	- RunPhyml.py
-		Run PhyML to get branch length estimates (topology not optimized, uses JTT model)
-	- SetupPAML.py
-	- ExtractParameter.py
-	- ExtractBest.py
-	- ExtractBEB.py
-	- FormatBEB.py
-	- GetInterPro.py
-	- MergeBEBInterPro.py
+- RestrictAlignments.py
+- ExtractDNA.py
+- GetNewAlignments.py
+- RunPhyml.py
+	Run PhyML to get branch length estimates (topology not optimized, uses JTT model)
+- SetupPAML.py
+- ExtractParameter.py
+- ExtractBest.py
+- ExtractBEB.py
+- FormatBEB.py
+- GetInterPro.py
+- MergeBEBInterPro.py
 
 
 ## R scripts
