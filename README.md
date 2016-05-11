@@ -68,16 +68,16 @@ Pre-processing, extracting the coding sequences and translations, setting up con
     For each group that wasn't skipped:
 
     - \<group\>.aa.fa:                          Protein sequences without gaps
-    - <group>.dna.fa:                         Corresponding cDNA sequences
-    - <group>.<msaprogram>.fas:               New alignment (AA, ids remapped)
-    - <group>.<msaprogram>.dna.fas            New alignment (cDNA, ids remapped)
-    - <group>.<msaprogram>.dna.fas-gb         Trimmed alignment from Gblocks
-    - <group>.<msaprogram>.dna.fas-gb.txt     Gblocks statistics
-    - <group>.<msaprogram>.dna.phylip         Trimmed cDNA alignment in Phylip, ready for Paml
-    - <group>.<msaprogram>.phylip             Trimmed AA alignment in phylip
-    - <group>.map                             Mapping of ids to the Phylip files
-    - <group>.ids                             Identifiers of the original sequences used
-    - <group>.combinations.tar                Temporary files from finding the best combination of sequences to use
+    - \<group\>.dna.fa:                         Corresponding cDNA sequences
+    - \<group\>.\<msaprogram\>.fas:               New alignment (AA, ids remapped)
+    - \<group\>.\<msaprogram\>.dna.fas            New alignment (cDNA, ids remapped)
+    - \<group\>.\<msaprogram\>.dna.fas-gb         Trimmed alignment from Gblocks
+    - \<group\>.\<msaprogram\>.dna.fas-gb.txt     Gblocks statistics
+    - \<group\>.\<msaprogram\>.dna.phylip         Trimmed cDNA alignment in Phylip, ready for Paml
+    - \<group\>.\<msaprogram\>.phylip             Trimmed AA alignment in phylip
+    - \<group\>.map                             Mapping of ids to the Phylip files
+    - \<group\>.ids                             Identifiers of the original sequences used
+    - \<group\>.combinations.tar                Temporary files from finding the best combination of sequences to use
 
 
 
