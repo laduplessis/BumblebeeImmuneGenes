@@ -35,16 +35,19 @@ Pre-processing, extracting the coding sequences and translations, setting up con
 
 - GetNewAlignments.py:
 	Produce alignments that can be used with PAML
+
 	    - Extract sequences for each group from the files created with ExtractDNA.py
 	    - Skip groups that have missing sequences for some species
 	    - Check translation again with OrthoDB alignments
 	    - If there is more than one sequence of a species:
+
 	            * Perform a new alignment on the translated sequences (AA) with the chosen MSA program for 
 	              every possible combination of sequences so that the MSA has only one sequence per species
 	            * Use Gblocks (with strict settings) to restrict the alignments to the best matching areas only
 	            * Select the alignment with the longest well-aligned parts (as determined by Gblocks)
 	            * If there are more alignments with disjoint sets of sequences select alignments by longest well aligned parts until 
 	              the maximum number is selected
+	              
 	        Else:
 	            * Perform a new alignment on the translated sequences with the chosen MSA program
 	    - Trim the alignment:
